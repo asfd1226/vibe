@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>윤형열의 개인 홈페이지</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --accent: #3b5bdb;
+      --accent-dark: #2b44b0;
+      --border: #e1e6ef;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12151c;
+        --surface: #1b202b;
+        --text: #e8ebf2;
+        --muted: #a3acbd;
+        --accent: #8ea2ff;
+        --accent-dark: #b4c0ff;
+        --border: #2b3240;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+    /* 타입 선택자: 제목·본문 공통 스타일 */
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+    h1 { margin: 0; font-size: 3rem; letter-spacing: -0.02em; }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.5rem;
+      padding-left: 12px;
+      border-left: 5px solid var(--accent);
+    }
+    h3 { margin: 0 0 8px; font-size: 1.2rem; }
+    p { margin: 0 0 12px; }
+    a { color: var(--accent); }
+
+    /* 헤더: 이름과 소개 문구를 첫 화면에서 강조 */
+    header {
+      text-align: center;
+      padding: 96px 20px 80px;
+      color: #fff;
+      background: linear-gradient(135deg, #3b5bdb, #7048e8);
+    }
+    header p {
+      margin: 12px 0 0;
+      font-size: 1.3rem;
+      opacity: 0.95;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0 20px;
+      max-width: 900px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+    nav a:hover { color: var(--accent); }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    /* 프로젝트 목록 */
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .project-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      background: var(--bg);
+    }
+    .project-item:hover { border-color: var(--accent); }
+    .project-link {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .project-link:hover { background: var(--accent-dark); }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+    footer p { margin: 0; }
+
+    /* 스마트폰 */
+    @media (max-width: 640px) {
+      h1 { font-size: 2.2rem; }
+      header { padding: 64px 16px 56px; }
+      header p { font-size: 1.1rem; }
+      nav ul { gap: 0; padding: 0 8px; }
+      nav a { padding: 12px 10px; font-size: 0.95rem; }
+      main { padding: 20px 14px 32px; }
+      section { padding: 20px; }
+      .project-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>윤형열</h1>
+    <p>문정25윤형열</p>
+  </header>
+
+  <nav aria-label="메인 메뉴">
+    <ul>
+      <li><a href="#about">소개</a></li>
+      <li><a href="#interests">관심사</a></li>
+      <li><a href="#activities">주요 활동</a></li>
+      <li><a href="#projects">프로젝트</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>소개</h2>
+      <p>안녕하세요, 윤형열입니다. 이 페이지에서 저에 대한 기본 정보를 확인하실 수 있습니다.</p>
+      <p>이메일: <a href="mailto:hy0004@smail.kongju.ac.kr">hy0004@smail.kongju.ac.kr</a></p>
+    </section>
+
+    <section id="interests">
+      <h2>관심사</h2>
+      <p>여러 가지 분야에 관심을 가지고 있습니다.</p>
+    </section>
+
+    <section id="activities">
+      <h2>주요 활동</h2>
+      <p>이것저것 해볼 예정입니다.</p>
+    </section>
+
+    <section id="projects">
+      <h2>프로젝트</h2>
+      <div class="project-list">
+        <article class="project-item">
+          <h3>오늘의 할일 만들기</h3>
+          <p>오늘 해야 할 일을 정리하고 관리할 수 있는 할일 목록 페이지입니다.</p>
+          <a class="project-link" href="Todo-today.html">결과물 보기</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>제작: 윤형열 · 문의: <a href="mailto:hy0004@smail.kongju.ac.kr">hy0004@smail.kongju.ac.kr</a></p>
+  </footer>
+</body>
+</html>
